@@ -39,6 +39,7 @@ rook-ceph-cluster:
       spec:
         replicated:
           size: 1
+          requireSafeReplicaSize: false
       storageClass:
         enabled: true
         name: standard-rwo
@@ -67,7 +68,7 @@ rook-ceph-cluster:
               size: 1
         metadataServer:
           activeCount: 1
-          activeStandby: true
+          activeStandby: false
           resources:
             limits:
               memory: "4Gi"
